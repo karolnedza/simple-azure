@@ -22,6 +22,13 @@ module "transit_azure_2" {
   az_support = false
 }
 
+#### Transit Peering
+
+aviatrix_transit_gateway_peering "india_to_singapore" {
+  transit_gateway_name1 = "avx-central-india-transit"
+  transit_gateway_name2 = "avx-southeast-asia-transit"
+}
+
 #### Spoke India 1
 module "mc-spoke_1" {
   source  = "terraform-aviatrix-modules/mc-spoke/aviatrix"
