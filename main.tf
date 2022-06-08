@@ -24,7 +24,7 @@ module "transit_azure_2" {
 
 #### Transit Peering
 
-aviatrix_transit_gateway_peering "india_to_singapore" {
+resource aviatrix_transit_gateway_peering "india_to_singapore" {
   transit_gateway_name1 = "avx-central-india-transit"
   transit_gateway_name2 = "avx-southeast-asia-transit"
 }
